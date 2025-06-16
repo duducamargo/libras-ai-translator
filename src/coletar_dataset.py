@@ -84,7 +84,7 @@ while True:
     cv2.imshow("Captura", frame_display)
 
     key = cv2.waitKey(1) & 0xFF
-    if key == ord('q'):
+    if key == ord('x'):
         break
     elif ord('a') <= key <= ord('z'):
         capture_letter = chr(key)
