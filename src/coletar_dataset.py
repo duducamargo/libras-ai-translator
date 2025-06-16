@@ -34,7 +34,7 @@ hands = mp_hands.Hands(
 # Inicializa a webcam
 cap = cv2.VideoCapture(0)
 print(">>> Pressione a tecla correspondente à letra (a-z) para iniciar a coleta.")
-print(">>> Pressione ESC para pausar. Pressione 'q' para sair.")
+print(">>> Pressione ESC para pausar. Pressione 'x' para sair.")
 
 while True:
     ret, frame = cap.read()
