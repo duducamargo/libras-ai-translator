@@ -5,12 +5,12 @@ import mediapipe as mp
 import json
 
 # Carrega o modelo
-model_path = 'asl_gesture_model2.h5'
+model_path = '../models/asl_gesture_model2.h5'
 model = tf.keras.models.load_model(model_path)
-print("✅ Model successfully loaded.")
+print("Model successfully loaded.")
 
 # Carrega o mapeamento de classes
-with open('class_indices.json', 'r') as f:
+with open('../models/class_indices.json', 'r') as f:
     class_indices = json.load(f)
 
 # Reverte o mapeamento: {0: 'a', 1: 'b', ...}
@@ -21,7 +21,7 @@ image_width, image_height = 32, 32
 # Inicializa webcam
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
-    print("❌ Error: Camera not accessible.")
+    print("Error: Camera not accessible.")
     exit()
 
 # Segmentação de fundo com MediaPipe
@@ -39,12 +39,12 @@ hands = mp_hands.Hands(
     model_complexity=1
 )
 
-print("🎥 Processing frames... (press 'q' to exit)")
+print("Processing frames... (press 'q' to exit)")
 
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("❌ Error: Frame not accessible.")
+        print("Error: Frame not accessible.")
         break
 
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

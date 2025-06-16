@@ -5,7 +5,7 @@ import numpy as np
 import mediapipe as mp
 
 # Caminho onde as imagens serão salvas
-SAVE_PATH = "dataset"
+SAVE_PATH = "../dataset"
 os.makedirs(SAVE_PATH, exist_ok=True)
 
 # Dimensões da imagem salva
