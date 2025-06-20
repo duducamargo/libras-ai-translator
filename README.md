@@ -11,7 +11,7 @@ It includes a fully custom dataset, model training using CNNs, and real-time pre
 
 ## 🎯 Objectives
 
-- Capture hand gestures for selected Libras alphabet letters (currently A, B, C, L, M, N, O, Q, S, U, V, W)
+- Capture hand gestures for selected Libras alphabet letters (currently A, B, C, D, E, F, G, I, L, M, N, O, P, Q, R, S, T, U, V, W, Y)
 - Build and train a convolutional neural network (CNN) using custom images (32x32 RGB)
 - Predict letters in real time using the webcam, with hand segmentation and confidence scoring
 - Maintain a modular, clean and extensible project architecture
