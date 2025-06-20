@@ -5,7 +5,7 @@ import mediapipe as mp
 import json
 
 # Carrega o modelo
-model_path = '../models/asl_gesture_model2.h5'
+model_path = '../models/best_model.h5'
 model = tf.keras.models.load_model(model_path)
 print("Model successfully loaded.")
 
