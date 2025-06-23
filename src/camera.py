@@ -98,8 +98,14 @@ while True:
 
     cv2.imshow('ASL Gesture Recognition (Live)', frame_display)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    key = cv2.waitKey(1) & 0xFF
+
+    if key == ord(' '):
+        print(f"Letra capturada: {predicted_letter.upper()}")
+
+    if key == ord('q'):
         break
+
 
 # Libera os recursos
 cap.release()
